@@ -1,5 +1,100 @@
-.dokuwiki .searchform__form form.search .ajax_qsearch {
-    left: auto;
-    top: auto;
-    right: auto;
+#le_start_search .le-search {
+width:500px;
+background:#444;
+background:rgba(0,0,0,.2);
+-moz-border-radius:10px;
+-webkit-border-radius:10px;
+border-radius:10px;
+-moz-box-shadow:0 1px 1px rgba(0,0,0,.4) inset,0 1px 0 rgba(255,255,255,.2);
+-webkit-box-shadow:0 1px 1px rgba(0,0,0,.4) inset,0 1px 0 rgba(255,255,255,.2);
+box-shadow:0 1px 1px rgba(0,0,0,.4) inset,0 1px 0 rgba(255,255,255,.2)
+}
+
+#le_start_search .le-search input {
+width:370px;
+height:50px;
+padding:10px 5px;
+float:left;
+font-size:20px;
+border:0;
+background:#eee;
+-moz-border-radius:3px 0 0 3px;
+-webkit-border-radius:3px 0 0 3px;
+border-radius:3px 0 0 3px
+}
+
+.le-search input:focus {
+outline:0;
+background:#fff;
+-moz-box-shadow:0 0 2px rgba(0,0,0,.8) inset;
+-webkit-box-shadow:0 0 2px rgba(0,0,0,.8) inset;
+box-shadow:0 0 2px rgba(0,0,0,.8) inset
+}
+
+.le-search input::-webkit-input-placeholder {
+color:#555;
+font-weight:400;
+font-style:italic
+}
+
+.le-search input:-moz-placeholder {
+color:#555;
+font-weight:400;
+font-style:italic
+}
+
+.le-search input:-ms-input-placeholder {
+color:#555;
+font-weight:400;
+font-style:italic
+}
+
+.le-search button {
+overflow:visible;
+position:relative;
+float:right;
+border:0;
+padding:0;
+cursor:pointer;
+height:50px;
+width:130px;
+font:bold 15px/40px 'lucida sans','trebuchet MS',Tahoma;
+color:#fff;
+text-transform:uppercase;
+background:#4CAF50;
+-moz-border-radius:0 3px 3px 0;
+-webkit-border-radius:0 3px 3px 0;
+border-radius:0 3px 3px 0;
+text-shadow:0 -1px 0 rgba(0,0,0,.3)
+}
+
+.le-search button:hover {
+background:#439946
+}
+
+.le-search button:active,.le-search button:focus {
+background:#439946
+}
+
+.le-search button:before {
+content:'';
+position:absolute;
+border-width:8px 8px 8px 0;
+border-style:solid solid solid none;
+border-color:transparent #4CAF50;
+top:17px;
+left:-6px
+}
+
+.le-search button:hover:before {
+border-right-color:#439946
+}
+
+.le-search button:focus:before {
+border-right-color:#439946
+}
+
+.le-search button::-moz-focus-inner {
+border:0;
+padding:0
 }

@@ -84,14 +84,14 @@ class syntax_plugin_searchform extends DokuWiki_Syntax_Plugin {
             }
 
             /** based on  tpl_searchform() */
-            $renderer->doc .= '<div class="searchform__form">' . "\n";
-            $renderer->doc .= '<form action="' . wl() . '" accept-charset="utf-8" class="search" id="searchform__search" method="get" role="search"><div class="no">' . "\n";
+            $renderer->doc .= '<div id="le_start_search" class="le-search">' . "\n";
+            $renderer->doc .= '<form action="' . wl() . '" accept-charset="utf-8" class="le-search" id="searchform__search" method="get" role="search"><div class="le-search">' . "\n";
             $renderer->doc .= '<input type="hidden" name="do" value="search" />' . "\n";
             $renderer->doc .= '<input type="hidden" class="searchform__ns" name="ns" value="' . $ns . '" />';
             $renderer->doc .= '<input type="text" ';
             if($ACT == 'search') $renderer->doc .= 'value="' . htmlspecialchars($QUERY) . '" ';
-            $renderer->doc .= 'name="id" class="edit searchform__qsearch_in" />' . "\n";
-            $renderer->doc .= '<input type="submit" value="' . $lang['btn_search'] . '" class="button" title="' . $lang['btn_search'] . '" />' . "\n";
+            $renderer->doc .= 'name="id" class="le-search" placeholder="Search here..." required/>' . "\n";
+            $renderer->doc .= '<button type="submit">Search</button>' . "\n";
             $renderer->doc .= '<div class="ajax_qsearch JSpopup searchform__qsearch_out"></div>' . "\n";
             $renderer->doc .= '</div></form>' . "\n";
             $renderer->doc .= '</div>' . "\n";
